@@ -1,0 +1,5 @@
+# Enable logging? 0=No, 1=Yes
+LOG_ENABLE=0
+
+# Log file, only necessary if LOG_ENABLE is 1
+LOG_FILE=""
