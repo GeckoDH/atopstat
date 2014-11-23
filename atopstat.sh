@@ -18,4 +18,17 @@
 #      REVISION:  ---
 #===============================================================================
 
+# define atopstat working directory and default config
+# ATTENTION: change only if you know what to do
+WD="/home/graf/dev/atopstat/"
+CONFIG="/home/graf/dev/atopstat/atopstat.cnf"
 
+if [ -r ${WD}/functions.sh ] ; then
+  source ${WD}/functions.sh
+else
+  echo "Core functions couldn't be included. Maybe the config file is faulty!"
+  exit 255
+fi
+
+LoadConfig
+ParseParameters "${@}"
